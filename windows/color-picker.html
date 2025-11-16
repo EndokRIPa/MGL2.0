@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Выбор цвета</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <style>
+        .color-dialog {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(30,30,50,0.95), rgba(20,20,40,0.95));
+            border-radius: 0px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .color-title {
+            color: #00ffff;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .color-section {
+            margin: 10px 0;
+            padding: 15px;
+            background: rgba(40,40,60,0.6);
+            border-radius: 8px;
+        }
+        
+        .color-section h3 {
+            color: #00ffff;
+            margin-bottom: 10px;
+        }
+        
+        .custom-color-input {
+            display: flex;
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .custom-color-input input {
+            flex: 1;
+            padding: 5px;
+            background: rgba(20,20,30,0.8);
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 3px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="color-dialog">
+        <div class="color-title">Настройка цветов</div>
+        
+        <div class="color-section">
+            <h3>Цвет фона</h3>
+            <div class="color-picker" id="background-colors">
+                <!-- Background colors will be populated by JavaScript -->
+            </div>
+            <div class="custom-color-input">
+                <input type="color" id="custom-bg-color" value="#010756">
+                <button id="apply-bg-custom">Применить</button>
+            </div>
+        </div>
+        
+        <div class="color-section">
+            <h3>Цвет блоков</h3>
+            <div class="color-picker" id="block-colors">
+                <!-- Block colors will be populated by JavaScript -->
+            </div>
+            <div class="custom-color-input">
+                <input type="color" id="custom-block-color" value="#14141e">
+                <button id="apply-block-custom">Применить</button>
+            </div>
+        </div>
+        
+        <div class="color-section">
+            <h3>Цвет текста</h3>
+            <div class="color-picker" id="text-colors">
+                <!-- Text colors will be populated by JavaScript -->
+            </div>
+            <div class="custom-color-input">
+                <input type="color" id="custom-text-color" value="#ffffff">
+                <button id="apply-text-custom">Применить</button>
+            </div>
+        </div>
+        
+        <div class="color-section">
+            <h3>Акцентный цвет</h3>
+            <div class="color-picker" id="accent-colors">
+                <!-- Accent colors will be populated by JavaScript -->
+            </div>
+            <div class="custom-color-input">
+                <input type="color" id="custom-accent-color" value="#00ffff">
+                <button id="apply-accent-custom">Применить</button>
+            </div>
+        </div>
+        
+        <div style="flex: 1;"></div>
+        
+        <div style="display: flex; gap: 10px; justify-content: flex-end;">
+            <button id="reset-colors">Сброс</button>
+            <button id="save-colors">Сохранить</button>
+        </div>
+    </div>
+
+    <script src="../scripts/color-picker-renderer.js"></script>
+</body>
+</html>
