@@ -1,0 +1,35 @@
+{
+  "name": "MGL",
+  "version": "2.0.0",
+  "description": "Minecraft Launcher",
+  "main": "scripts/main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "dev": "electron . --dev"
+  },
+  "author": "Magma Launcher",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^22.0.0",
+    "electron-builder": "^24.0.0"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "fs-extra": "^11.1.1",
+    "node-fetch": "^3.3.1",
+    "unzipper": "^0.10.14"
+  },
+  "build": {
+    "appId": "com.magma.launcher",
+    "productName": "Magma Launcher",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!dist",
+      "!node_modules"
+    ]
+  }
+}
