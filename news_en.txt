@@ -1,4 +1,4 @@
-Release of Magma Launcher 2.0.1!
+Release of Magma Launcher 2.0!
 • Support for all versions of Minecraft
 • Modloader support
 • Customizable interface
